@@ -342,6 +342,7 @@ footer {
             &__item {
                 margin-bottom: 50px;
                 list-style: none;
+
                 .guide-contents__map {
                     &__title {
                         color: white;
@@ -353,6 +354,59 @@ footer {
                     }
                 }
             }
+        }
+    }
+}
+
+//access
+.access {
+    &-title {
+        font-size: 36px;
+        color: black;
+    }
+
+    &-contents {
+
+        &__list {
+            margin: 0;
+            margin-bottom: 50px;
+            padding: 0;
+            display: flex;
+            list-style: none;
+
+            &__item {
+                flex: 1;
+                height: 100px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                border-right: 1px solid black;
+
+                .access-contents__description {
+                    display: inline-block;
+                    text-align: left;
+
+                    &__title {
+                        margin: 0;
+                    }
+
+                    &__subtitle {
+                        margin: 0;
+                    }
+                }
+            }
+
+            &__item:last-child {
+                border-right: 0;
+            }
+        }
+    }
+
+    &-image {
+        img {
+            width: 100%;
         }
     }
 }
