@@ -405,4 +405,79 @@ footer .footer__title {
 .access-image img {
   width: 100%;
 }
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact-logo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact-logo img {
+  max-width: 512px;
+  width: 100%;
+}
+
+.contact-contents {
+  width: 500px;
+}
+
+.contact-contents__form__title {
+  color: white;
+  text-align: center;
+}
+
+.contact-contents__form #contact-form > :focus {
+  outline: 0;
+}
+
+.contact-contents__form #contact-form #name {
+  margin-bottom: 25px;
+  width: 100%;
+  line-height: 2;
+  text-indent: 1em;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact-contents__form #contact-form #email {
+  margin-bottom: 25px;
+  width: 100%;
+  text-indent: 1em;
+  line-height: 2;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact-contents__form #contact-form #message {
+  margin-bottom: 25px;
+  width: 100%;
+  text-indent: 1em;
+  line-height: 2;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact-contents__form #contact-form #send {
+  display: block;
+  margin: 0 auto;
+  line-height: 2;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+}
 /*# sourceMappingURL=style.css.map */
