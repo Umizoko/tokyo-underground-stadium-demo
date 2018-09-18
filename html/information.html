@@ -7,11 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tokyo Underground Stadium</title>
     <link rel="stylesheet" href="./../css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <script src="../javascript/main.js"></script>
 </head>
 
 <body>
 
-    <header>
+    <header class="fixed">
         <nav class="menu">
             <ul class="menu__list">
                 <li class="menu__list__item"><a href="../index.html">Home</a></li>
@@ -23,8 +26,78 @@
         </nav>
     </header>
 
-    <main role="main">
-    center
+    <main role="main" class="main__header-fixed">
+        <!-- open -->
+        <section class="background--white">
+            <div class="content">
+                <div class="open">
+                    <h1 class="open-title">Open</h1>
+                    <p class="open-subtitle">05:00～25:00</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- attention -->
+        <!-- note: webIconの大きさを揃える -->
+        <section class="background--white">
+            <div class="content">
+                <div class="attention">
+                    <h1 class="attention-title">Attention</h1>
+                    <div class="attention-contents">
+                        <ul class="attention-contents__list">
+                            <li class="attention-contents__list__item">
+                                <!-- <img src="..//assets/svg/smoking-ban-solid.svg" alt=""> -->
+                                <i class="fas fa-smoking-ban"></i>
+                                <h2>Do not smoking</h2>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                            </li>
+                            <li class="attention-contents__list__item">
+                                <i class="far fa-clock"></i>
+                                <!-- <img src="..//assets/svg/clock-regular.svg" alt=""> -->
+                                <h2>Take a break</h2>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                            </li>
+                            <li class="attention-contents__list__item">
+                                <i class="fas fa-child"></i>
+                                <!-- <img src="..//assets/svg/eye-regular.svg" alt=""> -->
+                                <h2>Attention</h2>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Link -->
+        <section class="background--white">
+            <div class="content">
+                <div class="link">
+                    <h1 class="link-title">Link</h1>
+                    <div class="link-contents">
+                        <ul class="link-contents__list">
+                            <li class="link-contents__list__item"><a href="../index.html"><img src="../assets/image/Desktop/info-home.png"
+                                        alt="">
+                                    <p>Home</p>
+                                </a></li>
+                            <li class="link-contents__list__item"><a href="./guide.html"><img src="../assets/image/Desktop/info-guide.png"
+                                        alt="">
+                                    <p>Guide</p>
+                                </a></li>
+                            <li class="link-contents__list__item"><a href="./access.html"><img src="../assets/image/Desktop/info-access.png"
+                                        alt="">
+                                    <p>Access</p>
+                                </a></li>
+                            <li class="link-contents__list__item"><a href="./contact.html"><img src="../assets/image/Desktop/info-contact.png"
+                                        alt="">
+                                    <p>Contact</p>
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer>
