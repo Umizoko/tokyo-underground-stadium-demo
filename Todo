@@ -1,6 +1,5 @@
 view more のhover時のanimation
 Guide Mapの画像を3Dに変更
-AccessのMapの画像をGoogleMapに変更（https://snazzymaps.com/）を使用すること
 index.htmlにアクセスしたとき、Loading画面を加える
 index.htmlのheaderのダブりを解消する(jqueryでscrollから.headerクラスをhideにする)
 LogoをSVGに変更する
