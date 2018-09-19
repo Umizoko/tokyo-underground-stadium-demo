@@ -6,6 +6,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tokyo Underground Stadium</title>
+    <link rel="manifest" href="./manifest.json">
     <link rel="stylesheet" href="./css/style.css">
     <script src="./javascript/anime.min.js"></script>
     <script src="./javascript/jquery-2.2.4.min.js"></script>
@@ -13,11 +14,22 @@
 </head>
 
 <body>
+    <!-- loading -->
+    <!-- <body class="noScroll"> -->
+
+    <!-- <div class='loading'>
+        <h1>
+            <div id="update">
+                <div class="logs"> <input class="log current-time-log"> <input class="log progress-log"> </div>
+                <div class="large square el"></div>
+            </div>
+        </h1>
+    </div> -->
 
     <header class="fixed">
         <nav class="menu">
             <ul class="menu__list">
-                <li class="menu__list__item"><a href="#">Home</a></li>
+                <li class="menu__list__item"><a href="#"><span>Home</span></a></li>
                 <li class="menu__list__item"><a href="./html/information.html">Information</a></li>
                 <li class="menu__list__item"><a href="./html/guide.html">Guide</a></li>
                 <li class="menu__list__item"><a href="./html/access.html">Access</a></li>
@@ -38,6 +50,8 @@
             </ul>
         </nav>
     </div>
+
+
 
     <main role="main">
         <section class="background--black--1st">
@@ -126,6 +140,10 @@
                 </div>
             </div>
         </section>
+
+
+
+
     </main>
 
     <footer>

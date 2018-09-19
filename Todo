@@ -1,11 +1,14 @@
-view more のhover時のanimation
 Guide Mapの画像を3Dに変更
 index.htmlにアクセスしたとき、Loading画面を加える
 LogoをSVGに変更する
 manifest追加 icon追加
 PWA化(画像、スクリプトなどをキャッシュ化する)
 
+
 smartphone用のデザインを作成する
+index inforのアニメーション
+view more のhover時のanimation
+headerをdisplay: sthikyに変更
 
 //　余裕があれば
 access mapのデザインを変更
