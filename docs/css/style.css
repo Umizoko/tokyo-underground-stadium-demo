@@ -56,6 +56,14 @@ body {
   vertical-align: bottom;
 }
 
+.header .hidden {
+  visibility: hidden;
+}
+
+.zindex-back {
+  z-index: 0;
+}
+
 .main__header-fixed {
   margin-top: 47.2px;
 }

@@ -58,7 +58,18 @@ body {
             vertical-align: bottom;
         }
     }
+
+    .hidden {
+        visibility: hidden;
+    }
+
 }
+
+.zindex-back {
+    z-index: 0;
+}
+
+
 
 .main__header-fixed {
     margin-top: 47.2px;
@@ -77,6 +88,8 @@ footer {
         }
     }
 }
+
+
 
 .DEBUG {
     background: #1C1C1C;
