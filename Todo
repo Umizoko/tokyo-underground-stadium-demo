@@ -1,16 +1,17 @@
+smartphone用のデザインを作成する
+.accessのdescriptionのレイアウトを変更
+.index.htmlのデザインの変更
+
 Guide Mapの画像を3Dに変更
-index.htmlにアクセスしたとき、Loading画面を加える
-LogoをSVGに変更する
-manifest追加 icon追加
 PWA化(画像、スクリプトなどをキャッシュ化する)
 
-
-smartphone用のデザインを作成する
 index inforのアニメーション
 view more のhover時のanimation
+index.htmlにアクセスしたとき、Loading画面を加える
 headerをdisplay: sthikyに変更
-
-//　余裕があれば
+Logoを修正する
 access mapのデザインを変更
+
+q DOM消去時のJavaScriptのerror
 
 https://umizoko.github.io/tokyo-underground-stadium-demo/

@@ -10,7 +10,7 @@ body {
     box-sizing: border-box;
 }
 
-.noScroll{
+.noScroll {
     overflow: hidden;
 }
 
@@ -134,9 +134,10 @@ footer {
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 1);
-    overflow:　hidden;
-    
+    overflow: hidden;
+
     z-index: 2;
+
     h1 {
         margin: 0;
         padding: 0;
@@ -465,8 +466,6 @@ footer {
     }
 }
 
-
-
 // guide
 .guide {
 
@@ -631,6 +630,159 @@ footer {
                     background-color: white;
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .content {
+        // scroll animation
+        // transform: translateY(-100px);　
+        width: 95%;
+        margin: 0 auto;
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+
+    // information
+    .open {
+        &-title {
+            font-size: 36px;
+            margin-bottom: 50px;
+            text-align: center
+        }
+
+        &-subtitle {
+            text-indent: 0;
+            text-align: center;
+        }
+    }
+
+    .attention {
+        &-title {
+            font-size: 36px;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        &-contents {
+            &__list {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                &__item {
+                    text-align: center;
+                    color: gray;
+                    margin-bottom: 25px;
+
+                    img {
+                        width: 100%;
+                    }
+
+                    i {
+                        font-size: 200px;
+                    }
+                }
+            }
+        }
+    }
+
+    .link {
+        &-title {
+            font-size: 36px;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        &-contents {
+            &__list {
+                padding: 0;
+                list-style: none;
+                display: flex;
+                flex-wrap: wrap;
+
+                &__item {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    // guide
+    .guide {
+        &-title {
+            font-size: 36px;
+            color: white;
+            text-align: center;
+        }
+    }
+
+    //access
+    .access {
+        &-title {
+            font-size: 36px;
+            color: black;
+            text-align: center;
+        }
+
+        &-contents {
+
+            &__list {
+                margin: 0;
+                margin-bottom: 50px;
+                padding: 0;
+                display: flex;
+                list-style: none;
+
+                &__item {
+                    flex: 1;
+                    height: 100px;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    border-right: 1px solid black;
+
+                    .access-contents__description {
+                        display: inline-block;
+                        text-align: left;
+
+                        &__title {
+                            margin: 0;
+                        }
+
+                        &__subtitle {
+                            margin: 0;
+                        }
+                    }
+                }
+
+                &__item:last-child {
+                    border-right: 0;
+                }
+            }
+        }
+    }
+
+    // contact
+    .contact {
+        display: flex;
+
+        &-logo {
+            svg {
+                display: none;
+            }
+        }
+
+        // 幅調整
+        .content{
+            width: 90%;
         }
     }
 }
