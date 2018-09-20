@@ -704,6 +704,7 @@ footer {
         top: 0;
         left: 0;
         width: 100%;
+        height: $header-mobile-height;
         background-color: $navigation-color;
         z-index: 2;
 
@@ -718,7 +719,6 @@ footer {
         .header-mobile {
             display: block;
             color: white;
-            height: $header-mobile-height;
             &__mat {
                 position: fixed;
                 width: 100vw;

@@ -692,6 +692,7 @@ footer .footer__title {
     top: 0;
     left: 0;
     width: 100%;
+    height: 112px;
     background-color: #0B0B0B;
     z-index: 2;
   }
@@ -708,7 +709,6 @@ footer .footer__title {
   .fixed .header-mobile {
     display: block;
     color: white;
-    height: 112px;
   }
   .fixed .header-mobile__mat {
     position: fixed;
