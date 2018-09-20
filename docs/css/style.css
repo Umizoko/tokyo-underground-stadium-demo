@@ -708,6 +708,7 @@ footer .footer__title {
   .fixed .header-mobile {
     display: block;
     color: white;
+    height: 112px;
   }
   .fixed .header-mobile__mat {
     position: fixed;
