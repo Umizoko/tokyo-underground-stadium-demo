@@ -1,17 +1,13 @@
-smartphone用のデザインを作成する
-.index.htmlのデザインの変更
-headerのデザインを変更
-
 Guide Mapの画像を3Dに変更
 PWA化(画像、スクリプトなどをキャッシュ化する)
 
 index inforのアニメーション
 view more のhover時のanimation
+indexのslideshowをanime.jsで変更して、下の切り替え位置を加える（animation）
 index.htmlにアクセスしたとき、Loading画面を加える
 headerをdisplay: sthikyに変更
+mobileのheaderをkeyframes に変更してみる
 Logoを修正する
 access mapのデザインを変更
-
-q DOM消去時のJavaScriptのerror
 
 https://umizoko.github.io/tokyo-underground-stadium-demo/

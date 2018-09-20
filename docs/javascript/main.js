@@ -1,19 +1,49 @@
 $(function () {
 
+	// screen sizeによって変更する
+	var $win = $(window);
+	$win.on('load resize', function () {
+		if (window.matchMedia('(max-width: 1000px)').matches) {
+			// Mobileの処理
+			console.log("screen width: under 1000px.");
+
+			// drawer open
+			const bar = document.querySelector(".header-mobile__menu-icon");
+			bar.addEventListener("click", ()=>{
+				console.log("click done.");
+				$("header").find(".menu").toggleClass("open");
+				$(".mat").toggleClass("header-mobile__mat");
+
+			});
+
+			const mat = document.querySelector(".mat");
+			mat.addEventListener("click", () => {
+				$("header").find(".menu").toggleClass("open");
+				$("header").find(".mat").toggleClass("header-mobile__mat");
+			});
+			
+		} else {
+			// Desktopの処理
+			console.log("screen width: over 1000px.");
+		}
+	});
+
 	let curr_scroll_top;
 	// update user scroll top
 	$(window).scroll(function () {
 		curr_scroll_top = $(this).scrollTop();
 
 		// index.html headerのmenuかぶりを修正
-		if (curr_scroll_top <= $(".header").find(".menu").offset().top) {
-			$(".header").find(".menu").removeClass("hidden");
-			$(".header").removeClass("zindex-back");
-		} else if (curr_scroll_top > $(".header").find(".menu").offset().top) {
-			$(".header").find(".menu").addClass("hidden");
-			$(".header").addClass("zindex-back");
+		if(document.querySelector(".header") != null) {
+			// console.log("exist .header class.");
+			if (curr_scroll_top <= $(".header").find(".menu").offset().top) {
+				$(".header").find(".menu").removeClass("hidden");
+				$(".header").removeClass("zindex-back");
+			} else if (curr_scroll_top > $(".header").find(".menu").offset().top) {
+				$(".header").find(".menu").addClass("hidden");
+				$(".header").addClass("zindex-back");
+			}
 		}
-
 
 		// scroll animation exsample
 		// if (curr_scroll_top >= $(".about").offset().top) {
@@ -27,9 +57,7 @@ $(function () {
 		// 	});
 		// 	cssSelector;
 		// }
-
 	})
-
 });
 
 document.addEventListener("DOMContentLoaded", init);
@@ -56,6 +84,7 @@ function init() {
 	// });
 	// update;
 
+	// contactのLogoAnimation
 	var lineDrawing = anime({
 		targets: '#lineDrawing .lines path',
 		strokeDashoffset: [anime.setDashoffset, 0],
