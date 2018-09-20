@@ -558,7 +558,6 @@ footer {
 }
 
 // contact
-
 .contact {
     display: flex;
 
@@ -567,6 +566,7 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 50px;
 
         img {
             max-width: 512px;
@@ -636,10 +636,7 @@ footer {
 
 @media screen and (max-width: 1000px) {
     .content {
-        // scroll animation
-        // transform: translateY(-100px);　
         width: 95%;
-        margin: 0 auto;
         padding-top: 75px;
         padding-bottom: 75px;
     }
@@ -647,8 +644,6 @@ footer {
     // information
     .open {
         &-title {
-            font-size: 36px;
-            margin-bottom: 50px;
             text-align: center
         }
 
@@ -660,33 +655,18 @@ footer {
 
     .attention {
         &-title {
-            font-size: 36px;
-            margin-bottom: 50px;
             text-align: center;
         }
 
         &-contents {
             &__list {
-                margin: 0;
-                padding: 0;
-                list-style: none;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
 
                 &__item {
-                    text-align: center;
-                    color: gray;
-                    margin-bottom: 25px;
-
-                    img {
-                        width: 100%;
-                    }
-
-                    i {
-                        font-size: 200px;
-                    }
+                    margin-bottom: 50px;
                 }
             }
         }
@@ -733,38 +713,34 @@ footer {
         &-contents {
 
             &__list {
-                margin: 0;
-                margin-bottom: 50px;
-                padding: 0;
                 display: flex;
-                list-style: none;
+                flex-direction: column;
 
-                &__item {
-                    flex: 1;
-                    height: 100px;
-
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-
-                    border-right: 1px solid black;
-
-                    .access-contents__description {
-                        display: inline-block;
-                        text-align: left;
-
-                        &__title {
-                            margin: 0;
-                        }
-
-                        &__subtitle {
-                            margin: 0;
-                        }
-                    }
+                #tel {
+                    order: 2;
                 }
 
+                #name {
+                    order: 1;
+                }
+
+                #adress {
+                    order: 3;
+                }
+
+                &__item {
+                    height: auto;
+                    display: block;
+                    border-right: none;
+                    border-bottom: 1px solid black;
+                    padding: 25px;
+                    text-align: center;
+                    .access-contents__description {
+                        text-align: center;
+                    }
+                }
                 &__item:last-child {
-                    border-right: 0;
+                    border-bottom: 0;
                 }
             }
         }
@@ -772,16 +748,20 @@ footer {
 
     // contact
     .contact {
-        display: flex;
-
         &-logo {
+            flex: 0;
+            padding: 0;
             svg {
                 display: none;
             }
         }
 
+        &-contents {
+            flex: 1;
+        }
+
         // 幅調整
-        .content{
+        .content {
             width: 90%;
         }
     }

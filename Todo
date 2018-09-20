@@ -1,6 +1,6 @@
 smartphone用のデザインを作成する
-.accessのdescriptionのレイアウトを変更
 .index.htmlのデザインの変更
+headerのデザインを変更
 
 Guide Mapの画像を3Dに変更
 PWA化(画像、スクリプトなどをキャッシュ化する)
