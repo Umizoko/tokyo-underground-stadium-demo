@@ -1,12 +1,16 @@
 // service worker
-if ('serviceWorker' in navigator) {
-	navigator.serviceWorker.register('/tokyo-underground-stadium-demo/serviceWorker.js', {scope: '/tokyo-underground-stadium-demo/'})
-		.then((registration) => {
-			console.log('ServiceWorker registration successful with scope: ', registration.scope);
-		}).catch((err) => {
-			console.log('ServiceWorker registration failed: ', err);
-		});
-}
+window.addEventListener('load', ()=>{
+	if ('serviceWorker' in navigator) {
+		// github pages version
+		navigator.serviceWorker.register('/tokyo-underground-stadium-demo/serviceWorker.js', {scope: '/tokyo-underground-stadium-demo/'})
+			.then((registration) => {
+				console.log('ServiceWorker registration successful with scope: ', registration.scope);
+			}).catch((err) => {
+				console.log('ServiceWorker registration failed: ', err);
+			});
+	}
+});
+
 
 $(function () {
 
