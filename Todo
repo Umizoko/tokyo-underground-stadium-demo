@@ -9,4 +9,7 @@ Logoを修正する
 access mapのデザインを変更
 headerをdisplay: sthikyに変更
 
+//　リクエストの回数を減らすため
+css, js, imageデータはすべてひとつにbundleする
+
 https://umizoko.github.io/tokyo-underground-stadium-demo/

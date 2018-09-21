@@ -1,5 +1,19 @@
 $(function () {
 
+	var $win = $(window);
+	$win.on('load resize', function () {
+		// 画面サイズによって画像を差し替える
+		var windowWidth = window.innerWidth;
+		const aboutImage = $(".about__right").find("img");
+		if (windowWidth > 1000) {
+			// PCの処理
+			aboutImage.attr("src", "./assets/image/Desktop/home-about.jpg");
+		} else {
+			// Mobileの処理
+			aboutImage.attr("src", "./assets/image/mobile/home-about.jpg");
+		}
+	});
+
 	// drawer open
 	const bar = document.querySelector(".header-mobile__menu-icon");
 	if (bar != null) {
@@ -7,7 +21,6 @@ $(function () {
 			console.log("click done.");
 			$("header").find(".menu").toggleClass("open");
 			$(".header-mobile__mat").toggleClass("fading");
-
 		});
 	}
 	// draw close

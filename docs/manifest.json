@@ -16,7 +16,15 @@
         "src": "./assets/icons/launcher-icon-4x.png",
         "type": "image/png",
         "sizes": "192x192"
+      },
+      {
+        "src": "./assets/icons/launcher-icon-8x.png",
+        "type": "image/png",
+        "sizes": "512x512"
       }
     ],
-    "start_url": "./"
+    "start_url": "./",
+    "background_color": "#0B0B0B",
+    "display": "browser",
+    "theme_color": "#0B0B0B"
   }
