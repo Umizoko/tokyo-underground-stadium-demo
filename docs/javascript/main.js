@@ -1,6 +1,6 @@
 // service worker
 if ('serviceWorker' in navigator) {
-	navigator.serviceWorker.register('/serviceWorker.js')
+	navigator.serviceWorker.register('/tokyo-underground-stadium-demo/serviceWorker.js', {scope: '/tokyo-underground-stadium-demo/'})
 		.then((registration) => {
 			console.log('ServiceWorker registration successful with scope: ', registration.scope);
 		}).catch((err) => {
