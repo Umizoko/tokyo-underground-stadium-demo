@@ -1,5 +1,6 @@
 Guide Mapの画像を3Dに変更
 PWA化(画像、スクリプトなどをキャッシュ化する)
+htmlにlang要素を追加
 
 index inforのアニメーション
 view more のhover時のanimation
