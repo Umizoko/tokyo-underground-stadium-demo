@@ -5,9 +5,8 @@ index inforのアニメーション
 view more のhover時のanimation
 indexのslideshowをanime.jsで変更して、下の切り替え位置を加える（animation）
 index.htmlにアクセスしたとき、Loading画面を加える
-headerをdisplay: sthikyに変更
-mobileのheaderをkeyframes に変更してみる
 Logoを修正する
 access mapのデザインを変更
+headerをdisplay: sthikyに変更
 
 https://umizoko.github.io/tokyo-underground-stadium-demo/

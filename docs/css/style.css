@@ -649,9 +649,9 @@ footer .footer__title {
   .menu {
     position: fixed;
     top: 0;
-    left: -70%;
+    left: -300px;
     background: #0B0B0B;
-    width: 70%;
+    width: 300px;
     height: 100vh;
     -webkit-transition: left 300ms linear;
     transition: left 300ms linear;
@@ -696,32 +696,25 @@ footer .footer__title {
     background-color: #0B0B0B;
     z-index: 2;
   }
-  .fixed .mat {
-    opacity: 0;
-    background-color: black;
-    -webkit-transition-property: opacity;
-    transition-property: opacity;
-    -webkit-transition-duration: 300ms;
-            transition-duration: 300ms;
-    -webkit-transition-timing-function: linear;
-            transition-timing-function: linear;
-  }
   .fixed .header-mobile {
     display: block;
     color: white;
   }
+  .fixed .header-mobile .fading {
+    width: 100vw;
+    opacity: 0.8;
+    left: 0;
+  }
   .fixed .header-mobile__mat {
     position: fixed;
+    top: 0;
+    left: -100vw;
     width: 100vw;
     height: 100vh;
     background-color: black;
-    opacity: 0.8;
-    -webkit-transition-property: opacity;
-    transition-property: opacity;
-    -webkit-transition-duration: 300ms;
-            transition-duration: 300ms;
-    -webkit-transition-timing-function: linear;
-            transition-timing-function: linear;
+    opacity: 0;
+    -webkit-transition: opacity 300ms linear, left 300ms linear;
+    transition: opacity 300ms linear, left 300ms linear;
   }
   .fixed .header-mobile__title {
     margin: 0;
@@ -732,6 +725,8 @@ footer .footer__title {
     display: inline-block;
     margin: 0;
     padding: 10px;
+    width: 18px;
+    height: 18px;
   }
   .fixed::after {
     content: "";
@@ -744,6 +739,21 @@ footer .footer__title {
   }
   .header .top-image {
     margin-top: 112px;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header .top-image img {
+    min-height: 300px;
+    max-height: 373px;
+    width: auto;
   }
   .header .menu {
     display: none;

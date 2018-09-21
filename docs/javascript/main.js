@@ -1,32 +1,23 @@
 $(function () {
 
-	// screen sizeによって変更する
-	var $win = $(window);
-	$win.on('load resize', function () {
-		if (window.matchMedia('(max-width: 1000px)').matches) {
-			// Mobileの処理
-			console.log("screen width: under 1000px.");
+	// drawer open
+	const bar = document.querySelector(".header-mobile__menu-icon");
+	if (bar != null) {
+		bar.addEventListener("click", () => {
+			console.log("click done.");
+			$("header").find(".menu").toggleClass("open");
+			$(".header-mobile__mat").toggleClass("fading");
 
-			// drawer open
-			const bar = document.querySelector(".header-mobile__menu-icon");
-			bar.addEventListener("click", ()=>{
-				console.log("click done.");
-				$("header").find(".menu").toggleClass("open");
-				$(".mat").toggleClass("header-mobile__mat");
-
-			});
-
-			const mat = document.querySelector(".mat");
-			mat.addEventListener("click", () => {
-				$("header").find(".menu").toggleClass("open");
-				$("header").find(".mat").toggleClass("header-mobile__mat");
-			});
-			
-		} else {
-			// Desktopの処理
-			console.log("screen width: over 1000px.");
-		}
-	});
+		});
+	}
+	// draw close
+	const mat = document.querySelector(".header-mobile__mat");
+	if (mat != null) {
+		mat.addEventListener("click", () => {
+			$("header").find(".menu").toggleClass("open");
+			$(".header-mobile__mat").toggleClass("fading");
+		});
+	}
 
 	let curr_scroll_top;
 	// update user scroll top
@@ -34,7 +25,7 @@ $(function () {
 		curr_scroll_top = $(this).scrollTop();
 
 		// index.html headerのmenuかぶりを修正
-		if(document.querySelector(".header") != null) {
+		if (document.querySelector(".header") != null) {
 			// console.log("exist .header class.");
 			if (curr_scroll_top <= $(".header").find(".menu").offset().top) {
 				$(".header").find(".menu").removeClass("hidden");
