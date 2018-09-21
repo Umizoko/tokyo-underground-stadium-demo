@@ -28,7 +28,6 @@ $(function () {
 	const bar = document.querySelector(".header-mobile__menu-icon");
 	if (bar != null) {
 		bar.addEventListener("click", () => {
-			console.log("click done.");
 			$("header").find(".menu").toggleClass("open");
 			$(".header-mobile__mat").toggleClass("fading");
 		});
@@ -46,7 +45,6 @@ $(function () {
 	// update user scroll top
 	$(window).scroll(function () {
 		curr_scroll_top = $(this).scrollTop();
-
 		// index.html headerのmenuかぶりを修正
 		if (document.querySelector(".header") != null) {
 			// console.log("exist .header class.");
