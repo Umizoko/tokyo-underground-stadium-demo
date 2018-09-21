@@ -1,3 +1,13 @@
+// service worker
+if ('serviceWorker' in navigator) {
+	navigator.serviceWorker.register('/ServiceWorker.js')
+		.then((registration) => {
+			console.log('ServiceWorker registration successful with scope: ', registration.scope);
+		}).catch((err) => {
+			console.log('ServiceWorker registration failed: ', err);
+		});
+}
+
 $(function () {
 
 	var $win = $(window);
@@ -10,7 +20,7 @@ $(function () {
 			aboutImage.attr("src", "./assets/image/Desktop/home-about.jpg");
 		} else {
 			// Mobileの処理
-			aboutImage.attr("src", "./assets/image/mobile/home-about.jpg");
+			aboutImage.attr("src", "./assets/image/Mobile/home-about.jpg");
 		}
 	});
 
