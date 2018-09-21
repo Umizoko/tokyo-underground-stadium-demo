@@ -23,7 +23,7 @@
         "sizes": "512x512"
       }
     ],
-    "start_url": "./",
+    "start_url": "https://umizoko.github.io/tokyo-underground-stadium-demo/",
     "background_color": "#0B0B0B",
     "display": "standalone",
     "theme_color": "#0B0B0B"
