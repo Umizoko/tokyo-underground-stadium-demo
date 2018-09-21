@@ -65,7 +65,7 @@ self.addEventListener('fetch', (event) => {
             );
         })
     );
-}));
+});
 
 self.addEventListener('activate', (event) => {
     var cacheWhitelist = ["static-v1"];
