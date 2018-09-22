@@ -492,6 +492,7 @@ footer {
                     &__image {
                         width: 100%;
                         border-radius: 5px;
+                        pointer-events: none;
                     }
                 }
             }
