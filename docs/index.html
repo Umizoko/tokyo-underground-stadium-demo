@@ -9,11 +9,13 @@
     <title>Tokyo Underground Stadium</title>
     <link rel="shortcut icon" type="image/x-icon" href="./assets/favicon/favicon.ico">
     <link rel="manifest" href="./manifest.json">
+    <link rel="stylesheet" href="./css/flickity.min.css" media="screen">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
     <script src="./javascript/anime.min.js"></script>
     <script src="./javascript/jquery-2.2.4.min.js"></script>
+    <script src="./javascript/flickity.pkgd.js"></script>
     <script src="./javascript/main.js"></script>
 </head>
 
@@ -82,27 +84,28 @@
             </div>
         </section>
 
-        <section class="background--black--2nd">
+        <section class="background--black--2nd" id="mobile">
             <div class="content">
                 <div class="event">
                     <h1 class="event__title">Event</h1>
                     <div class="event-article">
-                        <ul class="event-article__list">
-                            <li class="event-article__list__item"><a href="#"><img src="./assets/image/Desktop/home-event01.jpg"
+                            <!-- data-flickity-options='{ "cellAlign": "left", "contain": true , "autoPlay": true}' -->
+                        <ul class="event-article__list main-carousel">
+                            <li class="event-article__list__item carousel-cell"><a href="#"><img src="./assets/image/Desktop/home-event01.jpg"
                                         alt="">
                                     <div class="event-article__description">
                                         <p class="event-article__description__title">Tokyo Underground Stadium</p>
                                         <p class="event-article__description__subtitle">open</p>
                                     </div>
                                 </a></li>
-                            <li class="event-article__list__item"><a href="#"><img src="./assets/image/Desktop/home-event02.jpg"
+                            <li class="event-article__list__item carousel-cell"><a href="#"><img src="./assets/image/Desktop/home-event02.jpg"
                                         alt="">
                                     <div class="event-article__description">
                                         <p class="event-article__description__title">Tokyo Underground Stadium</p>
                                         <p class="event-article__description__subtitle">tennis</p>
                                     </div>
                                 </a></li>
-                            <li class="event-article__list__item"><a href="#"><img src="./assets/image/Desktop/home-event03.jpg"
+                            <li class="event-article__list__item carousel-cell"><a href="#"><img src="./assets/image/Desktop/home-event03.jpg"
                                         alt="">
                                     <div class="event-article__description">
                                         <p class="event-article__description__title">Tokyo Underground Stadium</p>
@@ -115,6 +118,41 @@
                 </div>
             </div>
         </section>
+
+        <section class="background--black--2nd" id='desktop'>
+                <div class="content">
+                    <div class="event">
+                        <h1 class="event__title">Event</h1>
+                        <div class="event-article">
+                                <!-- data-flickity-options='{ "cellAlign": "left", "contain": true , "autoPlay": true}' -->
+                            <ul class="event-article__list">
+                                <li class="event-article__list__item"><a href="#"><img src="./assets/image/Desktop/home-event01.jpg"
+                                            alt="">
+                                        <div class="event-article__description">
+                                            <p class="event-article__description__title">Tokyo Underground Stadium</p>
+                                            <p class="event-article__description__subtitle">open</p>
+                                        </div>
+                                    </a></li>
+                                <li class="event-article__list__item"><a href="#"><img src="./assets/image/Desktop/home-event02.jpg"
+                                            alt="">
+                                        <div class="event-article__description">
+                                            <p class="event-article__description__title">Tokyo Underground Stadium</p>
+                                            <p class="event-article__description__subtitle">tennis</p>
+                                        </div>
+                                    </a></li>
+                                <li class="event-article__list__item"><a href="#"><img src="./assets/image/Desktop/home-event03.jpg"
+                                            alt="">
+                                        <div class="event-article__description">
+                                            <p class="event-article__description__title">Tokyo Underground Stadium</p>
+                                            <p class="event-article__description__subtitle">swiming</p>
+                                        </div>
+                                    </a></li>
+                            </ul>
+                        </div>
+                        <div class="event-button"><a href="#">VIEW MORE</a></div>
+                    </div>
+                </div>
+            </section>
 
         <section class="bakcground--white">
             <div class="content">

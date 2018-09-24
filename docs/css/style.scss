@@ -15,6 +15,10 @@ body {
     overflow: hidden;
 }
 
+.displayNone{
+    display: none;
+}
+
 .menu {
     background: $navigation-color;
 
@@ -825,46 +829,9 @@ footer {
 
         &-article {
             margin-bottom: 100px;
-            overflow: hidden;
 
             &__list {
-                flex-wrap: nowrap;
-                animation-name: slideshow;
-                animation-duration: 20s;
-                animation-timing-function: ease-in-out;
-                animation-delay: 0s;
-                animation-iteration-count: infinite;
-                animation-direction: normal;
-
-                @keyframes slideshow {
-                    0% {
-                        transform: translateX(0);
-                    }
-
-                    16% {
-                        transform: translateX(0);
-                    }
-
-                    33% {
-                        transform: translateX(-100%);
-                    }
-
-                    49% {
-                        transform: translateX(-100%);
-                    }
-
-                    66% {
-                        transform: translateX(-200%);
-                    }
-
-                    84% {
-                        transform: translateX(-200%);
-                    }
-
-                    100% {
-                        transform: translateX(0);
-                    }
-                }
+                display: block;
 
                 &__item {
                     width: 100%;
@@ -879,6 +846,7 @@ footer {
                         img {
                             width: 100%;
                             vertical-align: bottom;
+                            pointer-events: none;
                         }
 
                         .event-article__description {

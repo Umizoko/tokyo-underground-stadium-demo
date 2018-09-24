@@ -1,8 +1,10 @@
 // service worker
-window.addEventListener('load', ()=>{
+window.addEventListener('load', () => {
 	if ('serviceWorker' in navigator) {
 		// github pages version
-		navigator.serviceWorker.register('/tokyo-underground-stadium-demo/serviceWorker.js', {scope: '/tokyo-underground-stadium-demo/'})
+		navigator.serviceWorker.register('/tokyo-underground-stadium-demo/serviceWorker.js', {
+				scope: '/tokyo-underground-stadium-demo/'
+			})
 			.then((registration) => {
 				console.log('ServiceWorker registration successful with scope: ', registration.scope);
 			}).catch((err) => {
@@ -22,9 +24,25 @@ $(function () {
 		if (windowWidth > 1000) {
 			// PCの処理
 			aboutImage.attr("src", "./assets/image/Desktop/home-about.jpg");
+
+			// slideshowの削除
+			const slideshow = document.querySelector(".event");
+			if(slideshow != null) {
+				document.querySelector("#mobile").classList.add("displayNone");
+				document.querySelector("#desktop").classList.remove("displayNone");
+
+			}
 		} else {
 			// Mobileの処理
 			aboutImage.attr("src", "./assets/image/Mobile/home-about.jpg");
+
+			// slideshowの追加
+			const slideshow = document.querySelector(".event");
+			if(slideshow != null) {
+				document.querySelector("#mobile").classList.remove("displayNone");
+				document.querySelector("#desktop").classList.add("displayNone");
+
+			}
 		}
 	});
 
@@ -112,5 +130,14 @@ function init() {
 		direction: 'alternate',
 		loop: false
 	});
-	lineDrawing;
+
+	// indexのSlideShow
+	var elem = document.querySelector('.main-carousel');
+	if(elem != null) {
+		var flicky = new Flickity( elem, {
+			cellAlign: 'right',
+			contain: true,
+			autoPlay: true
+			});
+	}
 }

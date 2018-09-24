@@ -9,6 +9,10 @@ body {
   overflow: hidden;
 }
 
+.displayNone {
+  display: none;
+}
+
 .menu {
   background: #0B0B0B;
 }
@@ -796,83 +800,9 @@ footer .footer__title {
   }
   .event-article {
     margin-bottom: 100px;
-    overflow: hidden;
   }
   .event-article__list {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    -webkit-animation-name: slideshow;
-            animation-name: slideshow;
-    -webkit-animation-duration: 20s;
-            animation-duration: 20s;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-    -webkit-animation-delay: 0s;
-            animation-delay: 0s;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-    -webkit-animation-direction: normal;
-            animation-direction: normal;
-  }
-  @-webkit-keyframes slideshow {
-    0% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
-    16% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
-    33% {
-      -webkit-transform: translateX(-100%);
-              transform: translateX(-100%);
-    }
-    49% {
-      -webkit-transform: translateX(-100%);
-              transform: translateX(-100%);
-    }
-    66% {
-      -webkit-transform: translateX(-200%);
-              transform: translateX(-200%);
-    }
-    84% {
-      -webkit-transform: translateX(-200%);
-              transform: translateX(-200%);
-    }
-    100% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
-  }
-  @keyframes slideshow {
-    0% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
-    16% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
-    33% {
-      -webkit-transform: translateX(-100%);
-              transform: translateX(-100%);
-    }
-    49% {
-      -webkit-transform: translateX(-100%);
-              transform: translateX(-100%);
-    }
-    66% {
-      -webkit-transform: translateX(-200%);
-              transform: translateX(-200%);
-    }
-    84% {
-      -webkit-transform: translateX(-200%);
-              transform: translateX(-200%);
-    }
-    100% {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-    }
+    display: block;
   }
   .event-article__list__item {
     width: 100%;
@@ -891,6 +821,7 @@ footer .footer__title {
   .event-article__list__item a img {
     width: 100%;
     vertical-align: bottom;
+    pointer-events: none;
   }
   .event-article__list__item a .event-article__description {
     padding-top: 25px;

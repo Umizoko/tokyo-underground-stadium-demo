@@ -1,13 +1,12 @@
 index inforのアニメーション
 view more のhover時のanimation
-indexのslideshowをanime.jsで変更して、下の切り替え位置を加える（animation）
 index.htmlにアクセスしたとき、Loading画面を加える
 Logoを修正する
 
 access mapのデザインを変更
 guide mapをインドアマップに対応
 
-//　リクエストの回数を減らすため
+//　extra
 css, js, imageデータはすべてひとつにbundleする
 
 https://umizoko.github.io/tokyo-underground-stadium-demo/
