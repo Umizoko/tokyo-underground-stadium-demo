@@ -127,6 +127,10 @@ footer {
     padding-bottom: 150px;
 }
 
+.content-offset{
+    transform: translateX(-100px);
+}
+
 // Home
 .loading {
     position: fixed;
@@ -154,7 +158,7 @@ footer {
 
 .about {
     // scroll animation
-    // opacity: 0;
+    opacity: 0;
     display: flex;
     justify-content: center;
 
@@ -224,6 +228,7 @@ footer {
 }
 
 .event {
+    opacity: 0;
 
     &__title {
         font-size: 48px;
@@ -331,6 +336,8 @@ footer {
 }
 
 .news {
+    opacity: 0;
+
     &-title {
         font-size: 48px;
         color: black;
@@ -425,6 +432,8 @@ footer {
 }
 
 .attention {
+    opacity: 0;
+
     &-title {
         font-size: 36px;
         margin-bottom: 50px;
@@ -456,6 +465,8 @@ footer {
 }
 
 .link {
+    opacity: 0;
+
     &-title {
         font-size: 36px;
         margin-bottom: 50px;

@@ -113,6 +113,11 @@ footer .footer__title {
   padding-bottom: 150px;
 }
 
+.content-offset {
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+}
+
 .loading {
   position: fixed;
   top: 0;
@@ -143,6 +148,7 @@ footer .footer__title {
 }
 
 .about {
+  opacity: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -226,6 +232,10 @@ footer .footer__title {
 
 .about__right img {
   width: 100%;
+}
+
+.event {
+  opacity: 0;
 }
 
 .event__title {
@@ -337,6 +347,10 @@ footer .footer__title {
   text-align: center;
 }
 
+.news {
+  opacity: 0;
+}
+
 .news-title {
   font-size: 48px;
   color: black;
@@ -427,6 +441,10 @@ footer .footer__title {
   text-indent: 2em;
 }
 
+.attention {
+  opacity: 0;
+}
+
 .attention-title {
   font-size: 36px;
   margin-bottom: 50px;
@@ -455,6 +473,10 @@ footer .footer__title {
 
 .attention-contents__list__item i {
   font-size: 200px;
+}
+
+.link {
+  opacity: 0;
 }
 
 .link-title {

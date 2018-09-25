@@ -1,12 +1,13 @@
-index inforのアニメーション
-view more のhover時のanimation
 index.htmlにアクセスしたとき、Loading画面を加える
+
 Logoを修正する
+解像度の限界を設定
 
 access mapのデザインを変更
 guide mapをインドアマップに対応
 
 //　extra
 css, js, imageデータはすべてひとつにbundleする
+部分的にWEB　COMPONENTS化してみる
 
 https://umizoko.github.io/tokyo-underground-stadium-demo/

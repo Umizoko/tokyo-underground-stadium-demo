@@ -79,18 +79,75 @@ $(function () {
 			}
 		}
 
-		// scroll animation exsample
-		// if (curr_scroll_top >= $(".about").offset().top) {
-		// 	console.log("ok");
-		// 	var cssSelector = anime({
-		// 		targets: '.about',
-		// 		translateY: 100,
-		// 		opacity: 1,
-		// 		easing: 'easeInOutQuad',
-		// 		duration: 500,
-		// 	});
-		// 	cssSelector;
-		// }
+		// scroll animation exsample:
+		let offsetY = 300; 
+		// index
+		// about
+		if(document.querySelector('.about') != null) {
+			if (curr_scroll_top + offsetY >= $(".about").offset().top) {
+				var cssSelector = anime({
+					targets: '.about',
+					translateX: '100px',
+					opacity: 1,
+					easing: 'easeOutExpo',
+					duration: 1000,
+				});
+			}
+			// event
+			if($('#desktop').css('display') != 'none'){
+				if (curr_scroll_top + offsetY  >= $('#desktop').find(".event").offset().top) {
+					var cssSelector = anime({
+						targets: '.event',
+						translateX: '100px',
+						opacity: 1,
+						easing: 'easeOutExpo',
+						duration: 1000,
+					});
+				}
+			}
+			if($('#mobile').css('display') != 'none'){
+				if (curr_scroll_top + offsetY  >= $('#mobile').find(".event").offset().top) {
+					var cssSelector = anime({
+						targets: '.event',
+						translateX: '100px',
+						opacity: 1,
+						easing: 'easeOutExpo',
+						duration: 1000,
+					});
+				}
+			}
+			// news
+			if (curr_scroll_top + offsetY  >= $(".news").offset().top) {
+				var cssSelector = anime({
+					targets: '.news',
+					translateX: '100px',
+					opacity: 1,
+					easing: 'easeOutExpo',
+					duration: 1000,
+				});
+			}
+		}
+		// information
+		if(document.querySelector('.open') != null) {
+			if (curr_scroll_top + offsetY >= $(".attention").offset().top) {
+				var cssSelector = anime({
+					targets: '.attention',
+					translateX: '100px',
+					opacity: 1,
+					easing: 'easeOutExpo',
+					duration: 1000,
+				});
+			}
+			if (curr_scroll_top + offsetY >= $(".link").offset().top) {
+				var cssSelector = anime({
+					targets: '.link',
+					translateX: '100px',
+					opacity: 1,
+					easing: 'easeOutExpo',
+					duration: 1000,
+				});
+			}
+		}
 	})
 });
 
