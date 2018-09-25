@@ -184,18 +184,31 @@ footer .footer__title {
 
 .about__left .about-button a {
   display: inline-block;
-  width: 8em;
-  border: 1px solid white;
-  border-radius: 5px;
+  width: 180px;
+  height: 60px;
   color: white;
-  font-size: 36px;
+  font-size: 18px;
   line-height: 1.5;
   text-decoration: none;
-  text-align: center;
+  position: relative;
 }
 
-.about__left .about-button a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+.about__left .about-button a svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.about__left .about-button a span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  text-align: center;
 }
 
 .about__right {
@@ -297,18 +310,31 @@ footer .footer__title {
 
 .event .event-button a {
   display: inline-block;
-  width: 8em;
-  border: 1px solid white;
-  border-radius: 5px;
+  width: 180px;
+  height: 60px;
   color: white;
-  font-size: 36px;
+  font-size: 18px;
   line-height: 1.5;
   text-decoration: none;
-  text-align: center;
+  position: relative;
 }
 
-.event .event-button a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+.event .event-button a svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.event .event-button a span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  text-align: center;
 }
 
 .news-title {
@@ -365,18 +391,31 @@ footer .footer__title {
 
 .news-button a {
   display: inline-block;
-  width: 8em;
-  border: 1px solid black;
-  border-radius: 5px;
+  width: 180px;
+  height: 60px;
   color: black;
-  font-size: 36px;
+  font-size: 18px;
   line-height: 1.5;
   text-decoration: none;
-  text-align: center;
+  position: relative;
 }
 
-.news-button a:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+.news-button a svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.news-button a span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  text-align: center;
 }
 
 .open-title {
