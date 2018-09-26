@@ -1,13 +1,12 @@
 index.htmlにアクセスしたとき、Loading画面を加える
 
 Logoを修正する
-解像度の限界を設定
 
 access mapのデザインを変更
-guide mapをインドアマップに対応
 
 //　extra
 css, js, imageデータはすべてひとつにbundleする
 部分的にWEB　COMPONENTS化してみる
+javascript,　cssの修正
 
 https://umizoko.github.io/tokyo-underground-stadium-demo/

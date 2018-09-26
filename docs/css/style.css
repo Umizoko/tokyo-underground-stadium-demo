@@ -870,6 +870,7 @@ footer .footer__title {
     -ms-flex-negative: 0;
         flex-shrink: 0;
     padding-right: 0;
+    text-align: center;
   }
   .event-article__list__item a {
     -webkit-filter: brightness(1);
@@ -881,6 +882,7 @@ footer .footer__title {
   }
   .event-article__list__item a img {
     width: 100%;
+    max-width: 384px;
     vertical-align: bottom;
     pointer-events: none;
   }
@@ -980,14 +982,16 @@ footer .footer__title {
   .link-contents__list {
     padding: 0;
     list-style: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .link-contents__list__item {
     width: 100%;
+    max-width: 548px;
   }
   .guide-title {
     font-size: 36px;

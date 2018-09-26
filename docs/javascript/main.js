@@ -192,9 +192,9 @@ function init() {
 	var elem = document.querySelector('.main-carousel');
 	if (elem != null) {
 		var flicky = new Flickity(elem, {
-			cellAlign: 'right',
+			cellAlign: 'center',
 			contain: true,
-			autoPlay: true
+			autoPlay: 3000
 		});
 	}
 
