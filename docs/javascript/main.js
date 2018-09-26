@@ -1,7 +1,6 @@
-// service worker
 window.addEventListener('load', () => {
+	// service worker
 	if ('serviceWorker' in navigator) {
-		// github pages version
 		navigator.serviceWorker.register('/tokyo-underground-stadium-demo/serviceWorker.js', {
 				scope: '/tokyo-underground-stadium-demo/'
 			})
@@ -11,11 +10,59 @@ window.addEventListener('load', () => {
 				console.log('ServiceWorker registration failed: ', err);
 			});
 	}
+
+	function doOnce() {
+		if (document.cookie.replace(/(?:(?:^|.*;\s*)doSomethingOnlyOnce\s*\=\s*([^;]*).*$)|^.*$/, "$1") !== "true") {
+			alert("Do something here!");
+			console.log("store cookie")
+			document.cookie = "doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+		}else{
+			console.log("already exist cookie")
+			return;
+		}
+	}
+
+	// index load画面（Animationだけ）
+	const progressLogEl = document.querySelector('#update .progress-log');
+	if (progressLogEl != null) {
+		// 一度だけAnimationをすｒ
+		doOnce();
+		const easingName = 'easeInOutQuad'
+		var update = anime({
+			targets: '#callbacks .el',
+			translateX: 250,
+			delay: 1000,
+			easing: easingName,
+			update: function (anim) {},
+			complete: function (anim) {
+
+				document.querySelector('.noScroll').classList.remove("noScroll");
+
+				var fade = anime({
+					targets: '.loading',
+					opacity: 0,
+					delay: 500,
+					easing: easingName,
+					complete: function (anim) {
+						const loading = $(".loading");
+						loading.css("display", "none");
+					}
+				});
+			}
+		});
+
+		var update_bar = anime({
+			targets: '.progress-bar',
+			delay: 1000,
+			easing: easingName,
+			width: '200px',
+		});
+	}
+
 });
 
 
 $(function () {
-
 	var $win = $(window);
 	$win.on('load resize', function () {
 		// 画面サイズによって画像を差し替える
@@ -80,10 +127,10 @@ $(function () {
 		}
 
 		// scroll animation exsample:
-		let offsetY = 300; 
+		let offsetY = 300;
 		// index
 		// about
-		if(document.querySelector('.about') != null) {
+		if (document.querySelector('.about') != null) {
 			if (curr_scroll_top + offsetY >= $(".about").offset().top) {
 				var cssSelector = anime({
 					targets: '.about',
@@ -94,8 +141,8 @@ $(function () {
 				});
 			}
 			// event
-			if($('#desktop').css('display') != 'none'){
-				if (curr_scroll_top + offsetY  >= $('#desktop').find(".event").offset().top) {
+			if ($('#desktop').css('display') != 'none') {
+				if (curr_scroll_top + offsetY >= $('#desktop').find(".event").offset().top) {
 					var cssSelector = anime({
 						targets: '.event',
 						translateX: '100px',
@@ -105,8 +152,8 @@ $(function () {
 					});
 				}
 			}
-			if($('#mobile').css('display') != 'none'){
-				if (curr_scroll_top + offsetY  >= $('#mobile').find(".event").offset().top) {
+			if ($('#mobile').css('display') != 'none') {
+				if (curr_scroll_top + offsetY >= $('#mobile').find(".event").offset().top) {
 					var cssSelector = anime({
 						targets: '.event',
 						translateX: '100px',
@@ -117,7 +164,7 @@ $(function () {
 				}
 			}
 			// news
-			if (curr_scroll_top + offsetY  >= $(".news").offset().top) {
+			if (curr_scroll_top + offsetY >= $(".news").offset().top) {
 				var cssSelector = anime({
 					targets: '.news',
 					translateX: '100px',
@@ -128,7 +175,7 @@ $(function () {
 			}
 		}
 		// information
-		if(document.querySelector('.open') != null) {
+		if (document.querySelector('.open') != null) {
 			if (curr_scroll_top + offsetY >= $(".attention").offset().top) {
 				var cssSelector = anime({
 					targets: '.attention',
@@ -154,26 +201,7 @@ $(function () {
 document.addEventListener("DOMContentLoaded", init);
 
 function init() {
-	// var updateLogEl = document.querySelector('#update .current-time-log');
-	// var progressLogEl = document.querySelector('#update .progress-log');
-	// var update = anime({
-	// 	targets: '#callbacks .el',
-	// 	translateX: 250,
-	// 	delay: 1000,
-	// 	update: function (anim) {
-	// 		updateLogEl.value = 'current time : ' + Math.round(anim.currentTime) + 'ms';
-	// 		progressLogEl.value = 'progress : ' + Math.round(anim.progress) + '%';
-	// 	},
-	// 	complete: function (anim) {
-	// 		// completedLogEl.value = 'completed : ' + anim.completed;
-	// 		const scroll = $(".noScroll");
-	// 		scroll.removeClass("noScroll");
-	// 		const loading = $(".loading");
-	// 		loading.css("display", "none");
-	// 		console.log("animation complete!");
-	// 	}
-	// });
-	// update;
+
 
 	// contactのLogoAnimation
 	var lineDrawing = anime({
@@ -200,10 +228,10 @@ function init() {
 
 	// index more viewのモーフィング
 	const about = document.querySelector('.about');
-	if( about != null){
+	if (about != null) {
 		const button = document.querySelectorAll(".button");
 		const path = document.querySelectorAll(".polymorph");
-		for(let i = 0; i < button.length; i++){
+		for (let i = 0; i < button.length; i++) {
 
 			button[i].addEventListener('mouseover', () => {
 				anime.remove(path[i]);
@@ -237,5 +265,5 @@ function init() {
 			});
 		}
 	}
-	
+
 }

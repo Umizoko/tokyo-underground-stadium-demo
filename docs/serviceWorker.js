@@ -5,6 +5,7 @@ var urlsToCache = [
     'javascript/flickity.pkgd.js',
     'javascript/anime.min.js',
     'javascript/jquery-2.2.4.min.js',
+    'javascript/cookies.js',
     'javascript/main.js',
     'css/flickity.min.css',
     'css/style.css',

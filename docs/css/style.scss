@@ -133,12 +133,13 @@ footer {
 
 // Home
 .loading {
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgba(20, 20, 20, 1);
     overflow: hidden;
 
     z-index: 2;
@@ -146,6 +147,7 @@ footer {
     h1 {
         margin: 0;
         padding: 0;
+        font-size: 18px;
     }
 
     #update {
@@ -153,6 +155,23 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
+
+        .progress-log{
+            width: 200px;
+            height: 25px;
+            border: 1px solid rgba(255, 255, 255, 1);
+            position: relative;
+
+            .progress-bar {
+                position: absolute;
+                top:0;
+                left:0;
+                width:0;
+                height: 25px;
+                background-color: rgba(255, 255, 255, 1);
+            }
+        }
     }
 }
 
