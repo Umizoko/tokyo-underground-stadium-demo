@@ -57,13 +57,13 @@ window.addEventListener('load', () => {
 				easing: easingName,
 				width: '200px',
 			});
+		} else {
+			// already exist cookie
+			document.querySelector('.noScroll').classList.remove("noScroll");
+			const loading = $(".loading");
+			loading.css("display", "none");
 		}
-	} else {
-		// already exist cookie
-		document.querySelector('.noScroll').classList.remove("noScroll");
-		const loading = $(".loading");
-		loading.css("display", "none");
-	}
+	} 
 
 });
 
