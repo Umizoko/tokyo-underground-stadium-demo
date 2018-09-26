@@ -127,7 +127,7 @@ footer .footer__title {
   height: 100vh;
   background-color: #141414;
   overflow: hidden;
-  z-index: 2;
+  z-index: 3;
 }
 
 .loading h1 {
