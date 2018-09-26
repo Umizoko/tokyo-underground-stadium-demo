@@ -11,60 +11,7 @@ window.addEventListener('load', () => {
 			});
 	}
 
-	var doOnce = (() => {
-		if (document.cookie.replace(/(?:(?:^|.*;\s*)doSomethingOnlyOnce\s*\=\s*([^;]*).*$)|^.*$/, "$1") !== "true") {
-			console.log("store cookie")
-			document.cookie = "doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
-			return Boolean(true)
-		} else {
-			console.log("already exist cookie")
-			return Boolean(false);
-		}
-	});
-
-	// index load画面（Animationだけ）
-	const progressLogEl = document.querySelector('#update .progress-log');
-	if (progressLogEl != null) {
-		if (doOnce()) {
-			// stored cookie
-			const easingName = 'easeInOutQuad'
-			var update = anime({
-				targets: '#callbacks .el',
-				translateX: 250,
-				delay: 1000,
-				easing: easingName,
-				update: function (anim) {},
-				complete: function (anim) {
-
-					document.querySelector('.noScroll').classList.remove("noScroll");
-
-					var fade = anime({
-						targets: '.loading',
-						opacity: 0,
-						delay: 500,
-						easing: easingName,
-						complete: function (anim) {
-							const loading = $(".loading");
-							loading.css("display", "none");
-						}
-					});
-				}
-			});
-
-			var update_bar = anime({
-				targets: '.progress-bar',
-				delay: 1000,
-				easing: easingName,
-				width: '200px',
-			});
-		} else {
-			// already exist cookie
-			document.querySelector('.noScroll').classList.remove("noScroll");
-			const loading = $(".loading");
-			loading.css("display", "none");
-		}
-	} 
-
+	
 });
 
 
@@ -207,6 +154,60 @@ $(function () {
 document.addEventListener("DOMContentLoaded", init);
 
 function init() {
+	var doOnce = (() => {
+		if (document.cookie.replace(/(?:(?:^|.*;\s*)doSomethingOnlyOnce\s*\=\s*([^;]*).*$)|^.*$/, "$1") !== "true") {
+			console.log("store cookie")
+			document.cookie = "doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+			return Boolean(true)
+		} else {
+			console.log("already exist cookie")
+			return Boolean(false);
+		}
+	});
+
+	// index load画面（Animationだけ）
+	const progressLogEl = document.querySelector('#update .progress-log');
+	if (progressLogEl != null) {
+		if (doOnce()) {
+			// stored cookie
+			const easingName = 'easeInOutQuad'
+			var update = anime({
+				targets: '#callbacks .el',
+				translateX: 250,
+				delay: 1000,
+				easing: easingName,
+				update: function (anim) {},
+				complete: function (anim) {
+
+					document.querySelector('.noScroll').classList.remove("noScroll");
+
+					var fade = anime({
+						targets: '.loading',
+						opacity: 0,
+						delay: 500,
+						easing: easingName,
+						complete: function (anim) {
+							const loading = $(".loading");
+							loading.css("display", "none");
+						}
+					});
+				}
+			});
+
+			var update_bar = anime({
+				targets: '.progress-bar',
+				delay: 1000,
+				easing: easingName,
+				width: '200px',
+			});
+		} else {
+			// already exist cookie
+			document.querySelector('.noScroll').classList.remove("noScroll");
+			const loading = $(".loading");
+			loading.css("display", "none");
+		}
+	} 
+
 
 
 	// contactのLogoAnimation
