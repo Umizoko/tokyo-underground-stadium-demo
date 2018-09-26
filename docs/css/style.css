@@ -903,6 +903,7 @@ footer .footer__title {
   .event-article__list__item a img {
     width: 100%;
     max-width: 384px;
+    height: auto;
     vertical-align: bottom;
     pointer-events: none;
   }

@@ -11,6 +11,69 @@ window.addEventListener('load', () => {
 			});
 	}
 
+	// contactのLogoAnimation
+	var lineDrawing = anime({
+		targets: '#lineDrawing .lines path',
+		strokeDashoffset: [anime.setDashoffset, 0],
+		easing: 'easeInOutSine',
+		duration: 3000,
+		delay: function (el, i) {
+			return i * 250
+		},
+		direction: 'alternate',
+		loop: false
+	});
+
+	// indexのSlideShow
+	var elem = document.querySelector('.main-carousel');
+	if (elem != null) {
+		var flicky = new Flickity(elem, {
+			cellAlign: 'center',
+			contain: true,
+			autoPlay: 3000
+		});
+	}
+
+	// index more viewのモーフィング
+	const about = document.querySelector('.about');
+	if (about != null) {
+		const button = document.querySelectorAll(".button");
+		const path = document.querySelectorAll(".polymorph");
+		for (let i = 0; i < button.length; i++) {
+
+			button[i].addEventListener('mouseover', () => {
+				anime.remove(path[i]);
+				var hover = anime({
+					targets: path[i],
+					d: 'M10,10 C10,10 50,7 90,7 C130,7 170,10 170,10 C170,10 172,20 172,30 C172,40 170,50 170,50 C170,50 130,53 90,53 C50,53 10,50 10,50 C10,50 8,40 8,30 C8,20 10,10 10,10 Z',
+					duration: 700,
+					elasticity: 500,
+					offset: 0
+				});
+			});
+			button[i].addEventListener('mouseout', () => {
+				anime.remove(path[i]);
+				var down = anime({
+					targets: path[i],
+					d: 'M10,10 C10,10 50,9.98999977 90,9.98999977 C130,9.98999977 170,10 170,10 C170,10 170.009995,20 170.009995,30 C170.009995,40 170,50 170,50 C170,50 130,50.0099983 90,50.0099983 C50,50.0099983 10,50 10,50 C10,50 9.98999977,40 9.98999977,30 C9.98999977,20 10,10 10,10 Z',
+					duration: 800,
+					elasticity: 700,
+					offset: 0
+				});
+			});
+			button[i].addEventListener('mousedown', () => {
+				anime.remove(path[i]);
+				var down = anime({
+					targets: path[i],
+					d: 'M10,10 C10,10 50,9.98999977 90,9.98999977 C130,9.98999977 170,10 170,10 C170,10 170.009995,20 170.009995,30 C170.009995,40 170,50 170,50 C170,50 130,50.0099983 90,50.0099983 C50,50.0099983 10,50 10,50 C10,50 9.98999977,40 9.98999977,30 C9.98999977,20 10,10 10,10 Z',
+					duration: 800,
+					elasticity: 700,
+					offset: 0
+				});
+			});
+		}
+	}
+
 	
 });
 
@@ -156,11 +219,9 @@ document.addEventListener("DOMContentLoaded", init);
 function init() {
 	var doOnce = (() => {
 		if (document.cookie.replace(/(?:(?:^|.*;\s*)doSomethingOnlyOnce\s*\=\s*([^;]*).*$)|^.*$/, "$1") !== "true") {
-			console.log("store cookie")
 			document.cookie = "doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
 			return Boolean(true)
 		} else {
-			console.log("already exist cookie")
 			return Boolean(false);
 		}
 	});
@@ -208,69 +269,5 @@ function init() {
 		}
 	} 
 
-
-
-	// contactのLogoAnimation
-	var lineDrawing = anime({
-		targets: '#lineDrawing .lines path',
-		strokeDashoffset: [anime.setDashoffset, 0],
-		easing: 'easeInOutSine',
-		duration: 3000,
-		delay: function (el, i) {
-			return i * 250
-		},
-		direction: 'alternate',
-		loop: false
-	});
-
-	// indexのSlideShow
-	var elem = document.querySelector('.main-carousel');
-	if (elem != null) {
-		var flicky = new Flickity(elem, {
-			cellAlign: 'center',
-			contain: true,
-			autoPlay: 3000
-		});
-	}
-
-	// index more viewのモーフィング
-	const about = document.querySelector('.about');
-	if (about != null) {
-		const button = document.querySelectorAll(".button");
-		const path = document.querySelectorAll(".polymorph");
-		for (let i = 0; i < button.length; i++) {
-
-			button[i].addEventListener('mouseover', () => {
-				anime.remove(path[i]);
-				var hover = anime({
-					targets: path[i],
-					d: 'M10,10 C10,10 50,7 90,7 C130,7 170,10 170,10 C170,10 172,20 172,30 C172,40 170,50 170,50 C170,50 130,53 90,53 C50,53 10,50 10,50 C10,50 8,40 8,30 C8,20 10,10 10,10 Z',
-					duration: 700,
-					elasticity: 500,
-					offset: 0
-				});
-			});
-			button[i].addEventListener('mouseout', () => {
-				anime.remove(path[i]);
-				var down = anime({
-					targets: path[i],
-					d: 'M10,10 C10,10 50,9.98999977 90,9.98999977 C130,9.98999977 170,10 170,10 C170,10 170.009995,20 170.009995,30 C170.009995,40 170,50 170,50 C170,50 130,50.0099983 90,50.0099983 C50,50.0099983 10,50 10,50 C10,50 9.98999977,40 9.98999977,30 C9.98999977,20 10,10 10,10 Z',
-					duration: 800,
-					elasticity: 700,
-					offset: 0
-				});
-			});
-			button[i].addEventListener('mousedown', () => {
-				anime.remove(path[i]);
-				var down = anime({
-					targets: path[i],
-					d: 'M10,10 C10,10 50,9.98999977 90,9.98999977 C130,9.98999977 170,10 170,10 C170,10 170.009995,20 170.009995,30 C170.009995,40 170,50 170,50 C170,50 130,50.0099983 90,50.0099983 C50,50.0099983 10,50 10,50 C10,50 9.98999977,40 9.98999977,30 C9.98999977,20 10,10 10,10 Z',
-					duration: 800,
-					elasticity: 700,
-					offset: 0
-				});
-			});
-		}
-	}
-
+	
 }

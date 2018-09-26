@@ -833,12 +833,6 @@ footer {
                 min-height: 300px;
                 max-height: 373px;
                 width: auto;
-                // text-align: center;
-                // transform-origin: center;
-                // transform: translateX(-50%);
-                // height: 100vh;
-                // width: auto;
-                // content: url("../assets/image/Mobile/home-header-image.png");
             }
         }
 
@@ -903,13 +897,13 @@ footer {
                     text-align: center;
 
                     a {
-
                         filter: brightness(1);
                         transition: filter 0.25s;
 
                         img {
                             width: 100%;
                             max-width: 384px;
+                            height: auto;
                             vertical-align: bottom;
                             pointer-events: none;
                         }

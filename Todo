@@ -1,10 +1,12 @@
-index.htmlにアクセスしたとき、Loading画面を加える
-
 access mapのデザインを変更
 
 //　extra
 css, js, imageデータはすべてひとつにbundleする
 部分的にWEB　COMPONENTS化してみる
 javascript,　cssの修正
+
+// q
+cookie登録後画面を更新するとちらつく
+indexのeventのimageが半分までしか読み込まれていない（初回）
 
 https://umizoko.github.io/tokyo-underground-stadium-demo/
