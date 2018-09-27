@@ -13,6 +13,14 @@ body {
   display: none;
 }
 
+.slide {
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
+  opacity: 1 !important;
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
+}
+
 .menu {
   background: #0B0B0B;
 }

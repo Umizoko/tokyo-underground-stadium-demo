@@ -19,6 +19,13 @@ body {
     display: none;
 }
 
+.slide {
+    transform: translateX(100px);
+    opacity: 1 !important;
+
+    transition: all 0.7s ease-out;
+}
+
 .menu {
     background: $navigation-color;
 

@@ -146,67 +146,76 @@ $(function () {
 		// about
 		if (document.querySelector('.about') != null) {
 			if (curr_scroll_top + offsetY >= $(".about").offset().top) {
-				var cssSelector = anime({
-					targets: '.about',
-					translateX: '100px',
-					opacity: 1,
-					easing: 'easeOutExpo',
-					duration: 500,
-				});
+				// var cssSelector = anime({
+				// 	targets: '.about',
+				// 	translateX: '100px',
+				// 	opacity: 1,
+				// 	easing: 'easeOutExpo',
+				// 	duration: 500,
+				// });
+				document.querySelector('.about').classList.add('slide');
 			}
 			// event
 			if ($('#desktop').css('display') != 'none') {
 				if (curr_scroll_top + offsetY >= $('#desktop').find(".event").offset().top) {
-					var cssSelector = anime({
-						targets: '.event',
-						translateX: '100px',
-						opacity: 1,
-						easing: 'easeOutExpo',
-						duration: 500,
-					});
+					// var cssSelector = anime({
+					// 	targets: '.event',
+					// 	translateX: '100px',
+					// 	opacity: 1,
+					// 	easing: 'easeOutExpo',
+					// 	duration: 500,
+					// });
+					document.querySelectorAll('.event')[0].classList.add('slide');
+					document.querySelectorAll('.event')[1].classList.add('slide');
 				}
 			}
 			if ($('#mobile').css('display') != 'none') {
 				if (curr_scroll_top + offsetY >= $('#mobile').find(".event").offset().top) {
-					var cssSelector = anime({
-						targets: '.event',
-						translateX: '100px',
-						opacity: 1,
-						easing: 'easeOutExpo',
-						duration: 500,
-					});
+					// var cssSelector = anime({
+					// 	targets: '.event',
+					// 	translateX: '100px',
+					// 	opacity: 1,
+					// 	easing: 'easeOutExpo',
+					// 	duration: 500,
+					// });
+					document.querySelectorAll('.event')[0].classList.add('slide');
+					document.querySelectorAll('.event')[1].classList.add('slide');
 				}
 			}
 			// news
 			if (curr_scroll_top + offsetY >= $(".news").offset().top) {
-				var cssSelector = anime({
-					targets: '.news',
-					translateX: '100px',
-					opacity: 1,
-					easing: 'easeOutExpo',
-					duration: 500,
-				});
+				// var cssSelector = anime({
+				// 	targets: '.news',
+				// 	translateX: '100px',
+				// 	opacity: 1,
+				// 	easing: 'easeOutExpo',
+				// 	duration: 500,
+				// });
+				document.querySelector('.news').classList.add('slide');
 			}
 		}
 		// information
 		if (document.querySelector('.open') != null) {
 			if (curr_scroll_top + offsetY >= $(".attention").offset().top) {
-				var cssSelector = anime({
-					targets: '.attention',
-					translateX: '100px',
-					opacity: 1,
-					easing: 'easeOutExpo',
-					duration: 500,
-				});
+				// var cssSelector = anime({
+				// 	targets: '.attention',
+				// 	translateX: '100px',
+				// 	opacity: 1,
+				// 	easing: 'easeOutExpo',
+				// 	duration: 500,
+				// });
+				document.querySelector('.attention').classList.add('slide');
+
 			}
 			if (curr_scroll_top + offsetY >= $(".link").offset().top) {
-				var cssSelector = anime({
-					targets: '.link',
-					translateX: '100px',
-					opacity: 1,
-					easing: 'easeOutExpo',
-					duration: 500,
-				});
+				// var cssSelector = anime({
+				// 	targets: '.link',
+				// 	translateX: '100px',
+				// 	opacity: 1,
+				// 	easing: 'easeOutExpo',
+				// 	duration: 500,
+				// });
+				document.querySelector('.link').classList.add('slide');
 			}
 		}
 	})
