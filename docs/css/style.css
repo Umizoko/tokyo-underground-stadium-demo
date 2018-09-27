@@ -1,8 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 .noScroll {
@@ -13,12 +11,12 @@ body {
   display: none;
 }
 
-.slide {
+.slideAnimation {
   -webkit-transform: translateX(100px);
           transform: translateX(100px);
   opacity: 1 !important;
-  -webkit-transition: all 0.7s ease-out;
-  transition: all 0.7s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 .menu {

@@ -8,7 +8,6 @@ $header-mobile-height: 112px;
 body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 .noScroll {
@@ -19,11 +18,10 @@ body {
     display: none;
 }
 
-.slide {
+.slideAnimation {
     transform: translateX(100px);
     opacity: 1 !important;
-
-    transition: all 0.7s ease-out;
+    transition: all 0.5s ease-out;
 }
 
 .menu {
@@ -39,7 +37,6 @@ body {
         &__item {
             a {
                 margin: 0;
-                // margin-right: 20px;
                 padding: 10px;
                 padding-right: 15px;
                 padding-left: 15px;
@@ -64,7 +61,6 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    // height: $header-height;
     background-color: $navigation-color;
     z-index: 1;
 
@@ -737,7 +733,6 @@ footer {
         top: 0;
         left: -300px;
         background: $navigation-color;
-        // width: 70%;
         width: 300px;
         height: 100vh;
         transition: left 300ms linear;
@@ -753,7 +748,6 @@ footer {
             &__item {
                 a {
                     margin: 0;
-                    // margin-right: 20px;
                     padding: 10px;
                     padding-right: 15px;
                     padding-left: 15px;
