@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-	// cookie
+	
+	// 
+	// cookieを利用して、クライアントが初めて訪れたかどうかを判断
+	// 
 	var doOnce = (() => {
 		if (document.cookie.replace(/(?:(?:^|.*;\s*)doSomethingOnlyOnce\s*\=\s*([^;]*).*$)|^.*$/, "$1") !== "true") {
 			document.cookie = "doSomethingOnlyOnce=true; expires=Fri, 31 Dec 9999 23:59:59 GMT";
@@ -9,11 +12,15 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	});
 	
-	// index load画面（Animationだけ）
+	// 
+	// indexでLoading画面の設定（初めて訪れた場合のみ）
+	// 
 	const progressLogEl = document.querySelector('#update .progress-log');
 	if (progressLogEl != null) {
 		if (doOnce()) {
-			// stored cookie
+			// 
+			//　Mainアニメーション
+			// 
 			const easingName = 'easeInOutQuad'
 			var progress = anime({
 				targets: '#callbacks .el',
@@ -22,7 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
 				easing: easingName,
 				update: function (anim) {},
 				complete: function (anim) {
-					// fading animation
+					// 
+					// フェード
+					// 
 					var fade = anime({
 						targets: '.loading',
 						opacity: 0,
@@ -38,6 +47,9 @@ document.addEventListener("DOMContentLoaded", () => {
 				}
 			});
 	
+			// 
+			// プログレスバー
+			// 
 			var progress_bar = anime({
 				targets: '.progress-bar',
 				delay: 1000,
@@ -45,20 +57,20 @@ document.addEventListener("DOMContentLoaded", () => {
 				width: '200px',
 			});
 		} else {
-			// already exist cookie
 			document.querySelector('.noScroll').classList.remove("noScroll");
 			const loading = $(".loading");
 			loading.css("display", "none");
 		}
 	}
 	
-	// index more viewのモーフィング
+	// 
+	// indexのButtonボーダーのアニメーション
+	// 
 	const about = document.querySelector('.about');
 	if (about != null) {
 		const button = document.querySelectorAll(".button");
 		const path = document.querySelectorAll(".polymorph");
 		for (let i = 0; i < button.length; i++) {
-	
 			button[i].addEventListener('mouseover', () => {
 				anime.remove(path[i]);
 				var hover = anime({
@@ -92,7 +104,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	}
 	
-	// contactのLogoAnimation
+	// 
+	// contactのLogoのアニメーション
+	// 
 	var lineDrawing = anime({
 		targets: '#lineDrawing .lines path',
 		strokeDashoffset: [anime.setDashoffset, 0],
@@ -105,7 +119,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		loop: false
 	});
 	
-	// drawer open
+	// 
+	//　Drawerを開く
+	// 
 	const bar = document.querySelector(".header-mobile__menu-icon");
 	if (bar != null) {
 		bar.addEventListener("click", () => {
@@ -114,7 +130,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	}
 	
-	// draw close
+	// 
+	// Drawerを閉じる
+	// 
 	const mat = document.querySelector(".header-mobile__mat");
 	if (mat != null) {
 		mat.addEventListener("click", () => {
@@ -123,8 +141,11 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	}
 	
+	// 
+	// ファイルを読み込み終了時、または画面サイズ変更時にindex.html aboutの画像を書き換える
+	//　スライドショーDOMのDisplay：ON or OFF
+	// 
 	$(window).on('load resize', () => {
-		// 画面サイズによって画像を差し替える
 		var windowWidth = window.innerWidth;
 		const aboutImage = $(".about__right").find("img");
 		if (windowWidth > 1000) {
@@ -153,7 +174,10 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 window.addEventListener('load', () => {
-	// service worker
+	
+	// 
+	// service workerの登録
+	// 
 	if ('serviceWorker' in navigator) {
 		navigator.serviceWorker.register('/tokyo-underground-stadium-demo/serviceWorker.js', {
 				scope: '/tokyo-underground-stadium-demo/'
@@ -165,7 +189,9 @@ window.addEventListener('load', () => {
 			});
 	}
 
-	// indexのSlideShow
+	// 
+	// index スライドショーの設定
+	// 
 	var elem = document.querySelector('.main-carousel');
 	if (elem != null) {
 		var flicky = new Flickity(elem, {
@@ -175,13 +201,17 @@ window.addEventListener('load', () => {
 		});
 	}
 
-	// update user scroll top
+	// 
+	// スクロール時の設定
+	// 
 	let curr_scroll_top;
 	$(window).scroll(function () {
 		curr_scroll_top = $(this).scrollTop();
-		// index.html headerのmenuかぶりを修正
+
+		// 
+		// index.html headerのmenuがかぶるのを修正
+		// 
 		if (document.querySelector(".header") != null) {
-			// console.log("exist .header class.");
 			if (curr_scroll_top <= $(".header").find(".menu").offset().top) {
 				$(".header").find(".menu").removeClass("hidden");
 				$(".header").removeClass("zindex-back");
@@ -191,26 +221,31 @@ window.addEventListener('load', () => {
 			}
 		}
 
-		// scroll animation exsample:
-		// スクロールの発火位置を300px上にずらす
-		let offsetY = 300;
-		// index
+		// 
+		// 各コンテンツのスライドアニメーションの設定
+		// 
+		let offsetY = 300;　		// スクロールの発火位置を300px上にずらす
+		// 
+		// index.html
+		// 
 		if (document.querySelector('.about') != null) {
 			// about
 			if (curr_scroll_top + offsetY >= $(".about").offset().top) {
 				document.querySelector('.about').classList.add('slideAnimation');
 			}
 			// event
-			if ($('#desktop').css('display') != 'none') {
-				if (curr_scroll_top + offsetY >= $('#desktop').find(".event").offset().top) {
-					document.querySelectorAll('.event')[0].classList.add('slideAnimation');
-					document.querySelectorAll('.event')[1].classList.add('slideAnimation');
+			if(document.querySelector('.event') != null){
+				if ($('#desktop').css('display') != 'none') {
+					if (curr_scroll_top + offsetY >= $('#desktop').find(".event").offset().top) {
+						document.querySelectorAll('.event')[0].classList.add('slideAnimation');
+						document.querySelectorAll('.event')[1].classList.add('slideAnimation');
+					}
 				}
-			}
-			if ($('#mobile').css('display') != 'none') {
-				if (curr_scroll_top + offsetY >= $('#mobile').find(".event").offset().top) {
-					document.querySelectorAll('.event')[0].classList.add('slideAnimation');
-					document.querySelectorAll('.event')[1].classList.add('slideAnimation');
+				if ($('#mobile').css('display') != 'none') {
+					if (curr_scroll_top + offsetY >= $('#mobile').find(".event").offset().top) {
+						document.querySelectorAll('.event')[0].classList.add('slideAnimation');
+						document.querySelectorAll('.event')[1].classList.add('slideAnimation');
+					}
 				}
 			}
 			// news
@@ -218,12 +253,16 @@ window.addEventListener('load', () => {
 				document.querySelector('.news').classList.add('slideAnimation');
 			}
 		}
-		// information
+		// 
+		// information.html
+		// 
 		if (document.querySelector('.open') != null) {
+			// attention
 			if (curr_scroll_top + offsetY >= $(".attention").offset().top) {
 				document.querySelector('.attention').classList.add('slideAnimation');
 
 			}
+			// link
 			if (curr_scroll_top + offsetY >= $(".link").offset().top) {
 				document.querySelector('.link').classList.add('slideAnimation');
 			}
