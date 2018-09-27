@@ -201,6 +201,7 @@ footer .footer__title {
 .about__left__subtitle {
   margin: 0;
   margin-bottom: 20px;
+  padding-right: 10px;
   font-size: 24px;
 }
 

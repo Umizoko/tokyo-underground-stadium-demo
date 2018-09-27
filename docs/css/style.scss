@@ -119,8 +119,6 @@ footer {
 }
 
 .content {
-    // scroll animation
-    // transform: translateY(-100px);　
     width: 90%;
     margin: 0 auto;
     padding-top: 150px;
@@ -197,6 +195,7 @@ footer {
         &__subtitle {
             margin: 0;
             margin-bottom: 20px;
+            padding-right: 10px;
             font-size: 24px;
         }
 

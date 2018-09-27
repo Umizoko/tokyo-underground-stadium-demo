@@ -73,8 +73,6 @@ window.addEventListener('load', () => {
 			});
 		}
 	}
-
-	
 });
 
 
@@ -153,7 +151,7 @@ $(function () {
 					translateX: '100px',
 					opacity: 1,
 					easing: 'easeOutExpo',
-					duration: 1000,
+					duration: 500,
 				});
 			}
 			// event
@@ -164,7 +162,7 @@ $(function () {
 						translateX: '100px',
 						opacity: 1,
 						easing: 'easeOutExpo',
-						duration: 1000,
+						duration: 500,
 					});
 				}
 			}
@@ -175,7 +173,7 @@ $(function () {
 						translateX: '100px',
 						opacity: 1,
 						easing: 'easeOutExpo',
-						duration: 1000,
+						duration: 500,
 					});
 				}
 			}
@@ -186,7 +184,7 @@ $(function () {
 					translateX: '100px',
 					opacity: 1,
 					easing: 'easeOutExpo',
-					duration: 1000,
+					duration: 500,
 				});
 			}
 		}
@@ -198,7 +196,7 @@ $(function () {
 					translateX: '100px',
 					opacity: 1,
 					easing: 'easeOutExpo',
-					duration: 1000,
+					duration: 500,
 				});
 			}
 			if (curr_scroll_top + offsetY >= $(".link").offset().top) {
@@ -207,7 +205,7 @@ $(function () {
 					translateX: '100px',
 					opacity: 1,
 					easing: 'easeOutExpo',
-					duration: 1000,
+					duration: 500,
 				});
 			}
 		}
@@ -245,7 +243,7 @@ function init() {
 					var fade = anime({
 						targets: '.loading',
 						opacity: 0,
-						delay: 500,
+						delay: 1000,
 						easing: easingName,
 						complete: function (anim) {
 							const loading = $(".loading");
@@ -267,7 +265,7 @@ function init() {
 			const loading = $(".loading");
 			loading.css("display", "none");
 		}
-	} 
+	}
 
-	
+
 }
